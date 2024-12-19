@@ -3,7 +3,6 @@ from app.models import GameResult
 from app.game import TicTacToeGame
 from flask import render_template, request, redirect, url_for, session
 
-# Global variable to hold the game state (temporary, consider using DB/session)
 current_game = TicTacToeGame()
 
 @app.route('/')
