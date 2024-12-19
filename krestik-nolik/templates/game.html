@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game: Tic Tac Toe</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <form method="post">
+        <table>
+            {% for i in range(3) %}
+            <tr>
+                {% for j in range(3) %}
+                <td>
+                    <button type="submit" name="position" value="{{ i }}-{{ j }}">{{ game.board[i][j] }}</button>
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+    <p>Current Player: {{ game.current_player }}</p>
+</body>
+</html>

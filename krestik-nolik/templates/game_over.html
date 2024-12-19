@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конец игры</title>
+</head>
+<body>
+    <h1>Игра завершена!</h1>
+    {% if winner == "Draw" %}
+        <p>Ничья!</p>
+    {% else %}
+        <p>Победитель: {{ winner }}</p>
+    {% endif %}
+    <a href="/">Начать новую игру</a>
+</body>
+</html>
