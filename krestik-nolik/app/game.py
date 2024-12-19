@@ -6,7 +6,7 @@ class TicTacToeGame:
 
     def play(self, row, col):
         if self.board[row][col] != " " or self.winner:
-            return False  # Недопустимый ход
+            return False  
 
         self.board[row][col] = self.current_player
         if self.check_winner():
@@ -17,7 +17,6 @@ class TicTacToeGame:
         return True
 
     def check_winner(self):
-        # Проверка по строкам, столбцам и диагоналям
         for i in range(3):
             if self.board[i][0] == self.board[i][1] == self.board[i][2] != " ":
                 return True
